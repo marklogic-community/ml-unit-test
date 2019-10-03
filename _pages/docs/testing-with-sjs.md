@@ -60,7 +60,15 @@ Note that the last line returns the `assertions` array.
 
 ### Testing For Expected Errors
 
-*TODO*
+```javascript
+const test = require('/test/test-helper.xqy');
+
+try {
+    throw "wrong error message";
+} catch (error) {
+    test.assertEqual("expected error message", error, "Did not find expected error message");
+}
+```
 
 ## Testing XQuery using SJS
 
@@ -101,7 +109,3 @@ assertions.push(
 
 assertions
 ```
-
-### Testing For Expected Errors
-
-*TODO*
